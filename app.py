@@ -27,12 +27,6 @@ app.config['MAIL_PASSWORD'] = r'test@123456'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
-app.config['SERVER'] = 'aigbusiness.in'
-app.config['PORT'] = 21
-app.config['BINARY_STORE'] = True
-app.config['USER'] = 'policies@aigbusiness.in'
-app.config['PASS'] = 'policy123'
-
 
 db.init_app(app)
 mail.init_app(app)
