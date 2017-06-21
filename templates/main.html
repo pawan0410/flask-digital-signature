@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NDA – REMUNERATION</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <script src="/static/signature.js"></script>
+    <script src="/static/signature1.js"></script>
+    <script src="/static/signature2.js"></script>
+    <script src="/static/signature3.js"></script>
+    <script src="/static/signature4.js"></script>
+
+    <style>
+        body{
+            line-height: 1.5em;
+            width: 96%;
+            margin: 0 auto;
+        }
+        .signature_area table{
+            height:120px;
+        }
+        p{
+            text-align:justify;
+        }
+        .footer_button{
+            margin: 20px;
+            padding: 10px;
+            border-top: 1px solid;
+        }
+    </style>
+
+</head>
+<body onload="getLocation()">
+<form method="post" action="/savedata" id="frm">
+    <input type="hidden" id="location" name="location">
+    <input type="hidden" id="signature" name="signature">
+    <input type="hidden" id="signature1" name="signature1">
+    <input type="hidden" id="signature2" name="signature2">
+    <input type="hidden" id="signature3" name="signature3">
+    <input type="hidden" id="signature4" name="signature4">
+<h1>NDA – REMUNERATION</h1>
+<p>All information as it relates to the status of employment is confidential and may not be shared with
+    other employees. This includes, but is not limited to salary, bonuses and other types of
+    compensation. It is a violation of policy to obtain, possess, and distribute confidential personnel
+    information.</p>
+
+<p>
+    Disregard or failure to comply could lead to disciplinary action including termination. Any
+    employee aware of the possession or distribution of such information should notify Human
+    resources as soon as they become aware of the situation. Withholding such knowledge is also
+    considered as violation of the policy.
+</p>
+
+<p>
+    I have received a copy of read, understand, and agree to uphold this written policy on matters of
+    confidential information. I also understand that any violation of confidentiality, in whole or in part,
+    could result in disciplinary action up to and including termination and/ or legal action.
+</p>
+
+<p>
+    I recognize that this signed document of may agreement should uphold the provisions of this policy
+    will be kept in my personnel file.
+</p>
+
+<div class="signature_area">
+    <table cellspacing="3" cellpadding="3">
+        <tr>
+            <td>Signature :</td>
+            <td style="background:#faebd7;">
+                <div id="canvas">
+                    Canvas is not supported.
+                </div>
+                <script>
+				zkSignature.capture();
+
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>Date :</td>
+            <td><input type="date" name="nda_1_date"></td>
+        </tr>
+    </table>
+</div>
+
+<hr>
+
+<h1>NDA-PHI</h1>
+
+<p>
+    All patient Protected Health Information (PHI—which includes patient medical and financial
+    information), employee records, financial and operating data of the practice, and any other
+    information of a private or sensitive nature are considered confidential. Confidential information
+    should not be read or discussed by any employee unless pertaining to his or her specific job
+    requirements. Examples of inappropriate disclosures include :
+
+</p>
+
+<ul>
+    <li>Employees discussing or revealing PHI or other confidential information to friends or family
+        members.
+    </li>
+    <li>Employees discussing or revealing PHI or other confidential information to other employees
+        without a legitimate need to know.
+    </li>
+    <li>The disclosure of a patient’s presence in the office, hospital, or other medical facility, without
+        the patient’s consent, to an unauthorized party without a legitimate need to know, and that
+        may indicate the nature of the illness and jeopardize confidentiality.
+    </li>
+</ul>
+
+<p>
+    The unauthorized disclosure of PHI or other confidential information by employees can subject each
+    individual employee and the practice to civil and criminal liability. Disclosure of PHI or other
+    confidential information to unauthorized persons, or unauthorized access to, or misuse, theft,
+    destruction, alteration, or sabotage of such information, is grounds for immediate disciplinary action
+    up to and including termination.
+</p>
+<h2>Employee Confidentiality Agreement</h2>
+<p>
+    I hereby acknowledge, by my signature below, that I understand that the PHI, other confidential
+    records, and data to which I have knowledge and access in the course of my employment with
+    [insert name of practice/health care facility] is to be kept confidential, and this confidentiality is a
+    condition of my employment. This information shall not be disclosed to anyone under any
+    circumstances, except to the extent necessary to fulfill my job requirements. I understand that my
+    duty to maintain confidentiality continues even after I am no longer employed.
+</p>
+
+<p>
+    I am familiar with the guidelines in place at [insert name of practice/health care facility] pertaining
+    to the use and disclosure of patient PHI or other confidential information. Approval should first be
+    obtained before any disclosure of PHI or other confidential information not addressed in the
+    guidelines and policies and procedures of [insert name of practice/health care facility] is made. I
+    also understand that the unauthorized disclosure of patient PHI and other confidential or
+    proprietary information of [insert name of practice/health care facility] is grounds for disciplinary
+    action, up to and including immediate dismissal.
+</p>
+<table cellpadding="3" cellspacing="3">
+    <tr>
+        <td>Date</td>
+        <td><input type="date" name="nda2_date_a"></td>
+        <td>Date</td>
+        <td><input type="date" name="nda2_date_b"></td>
+
+    </tr>
+    <tr>
+        <td>Signature of Employee :</td>
+        <td style="background:#faebd7;">
+            <div id="canvas1">
+                Canvas is not supported.
+            </div>
+            <script>
+				zkSignatureOne.capture();
+
+            </script>
+        </td>
+
+        <td>Signature of Supervisor/Witness :</td>
+        <td style="background:#faebd7;">
+            <div id="canvas2">
+                Canvas is not supported.
+            </div>
+            <script>
+				zkSignatureTwo.capture();
+
+            </script>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Print Name:
+        </td>
+        <td><input type="text" name="nda2_print_name_a"></td>
+        <td>
+            Print Name:
+        </td>
+        <td><input type="text" name="nda2_print_name_b"></td>
+
+    </tr>
+</table>
+
+<hr>
+<h1>NDA- General</h1>
+<p>
+    I, <input type="text" placeholder="Enter Name" name="nda3_name"> understand that my employment with
+    <input type="text" placeholder="Enter Organisation Name" name="nda3_org_name">
+    requires that:
+
+</p>
+<ol>
+    <li>
+        During the course of my employment with the Company there may be disclosed to me certain
+        trade secrets of the Company; said trade secrets consisting but not necessarily limited to:
+        <ol type="a">
+            <li>
+                Technical information: Methods, processes, formulae, compositions, systems, techniques,
+                inventions, machines, computer programs, research projects, marketing or other technical
+                properties.
+            </li>
+            <li>
+                Business information: Customer lists, pricing data, sources of supply, financial data and
+                marketing, production, merchandising systems or services and plans, or any other intellectual
+                properties.
+            </li>
+        </ol>
+    </li>
+    <li>
+        I agree that I shall not during, or at any time after the termination of my employment engagement
+        for employment with the Company, use for myself or others, or disclose or divulge to others
+        including future employees, any trade secrets, confidential information, financial or any other
+        proprietary data of the Company in violation of this agreement.
+    </li>
+    <li>
+        Upon termination of my employment from the Company:
+        <ol type="a">
+            <li>
+                I shall return to the Company all documents and property of the Company, including but not
+                necessarily limited to: documents, drawings, reports, manuals, correspondence, customer lists,
+                computer programs, and all other materials and all copies thereof relating in any way to the
+                Company's business, or in any way obtained by me during the course of employ. I further
+                agree that I shall not retain copies, notes or abstracts of the foregoing.
+            </li>
+            <li>
+                The Company may notify any future or prospective employer or third party of the existence of
+                this agreement, and shall be entitled to full injunctive relief for any breach of this agreement.
+            </li>
+            <li>
+                This agreement shall be binding upon me and my personal representatives and successors in
+                interest, and shall inure to the benefit of the Company, its successors and assigns.
+            </li>
+        </ol>
+    </li>
+
+</ol>
+
+<table cellpadding="3" cellspacing="3">
+    <tr>
+        <td>Employee Name:</td>
+        <td><input type="text" placeholder="Enter Name" name="nda3_employee_name"></td>
+        <td>Employer Representative/Title:</td>
+        <td><input type="text" placeholder="Enter Name" name="nda3_employer_title"></td>
+    </tr>
+    <tr>
+        <td>Signature of Employee :</td>
+        <td style="background:#faebd7;">
+            <div id="canvas3">
+                Canvas is not supported.
+            </div>
+            <script>
+				zkSignatureThree.capture();
+
+            </script>
+        </td>
+
+        <td>Representative Signature :</td>
+        <td style="background:#faebd7;">
+            <div id="canvas4">
+                Canvas is not supported.
+            </div>
+            <script>
+				zkSignatureFour.capture();
+
+            </script>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            Date Signed:
+        </td>
+        <td><input type="date" name="nda3_date_a"></td>
+        <td>
+            Date Signed:
+        </td>
+        <td><input type="date" name="nda3_date_b"></td>
+    </tr>
+</table>
+
+<div class="footer_button">
+    <button type="submit" id="submit">Submit</button>
+</div>
+</form>
+
+<script>
+        function showPosition(position) {
+            //x.innerHTML = "Latitude: " + position.coords.latitude +
+            //"<br>Longitude: " + position.coords.longitude;
+
+
+             var xhttp = new XMLHttpRequest();
+             xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                 response = JSON.parse(this.responseText);
+                 document.getElementById('location').value = response.results[0].formatted_address;
+                }
+              };
+              xhttp.open("GET", 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+', '+position.coords.longitude+'+&sensor=true', true);
+              xhttp.send();
+
+
+         }
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function save(){
+            var canvas = document.getElementById("newSignature");
+			var signature = canvas.toDataURL("image/png");
+			var nda_1_date = document.querySelector('[name=nda_1_date]').value;
+			var nda2_date_a = document.querySelector('[name=nda2_date_a]').value;
+			var nda2_date_b = document.querySelector('[name=nda2_date_b]').value;
+			var canvas1 = document.getElementById("newSignature1");
+			var signature1 = canvas1.toDataURL("image/png");
+			var canvas2 = document.getElementById("newSignature2");
+			var signature2 = canvas2.toDataURL("image/png");
+			var nda2_print_name_a = document.querySelector('[name=nda2_print_name_a]').value;
+			var nda2_print_name_b = document.querySelector('[name=nda2_print_name_b]').value;
+			var nda3_name = document.querySelector('[name=nda3_name]').value;
+			var nda3_org_name = document.querySelector('[name=nda3_org_name]').value;
+			var nda3_employee_name = document.querySelector('[name=nda3_employee_name]').value;
+			var nda3_employer_title = document.querySelector('[name=nda3_employer_title]').value;
+			var canvas3 = document.getElementById("newSignature3");
+			var signature3 = canvas3.toDataURL("image/png");
+			var canvas4 = document.getElementById("newSignature4");
+			var signature4 = canvas4.toDataURL("image/png");
+			var nda3_date_a = document.querySelector('[name=nda3_date_a]').value;
+			var nda3_date_b = document.querySelector('[name=nda3_date_b]').value;
+
+
+
+
+			if ( zkSignature.isEmpty() ||  zkSignatureOne.isEmpty()
+			|| zkSignatureTwo.isEmpty() || zkSignatureThree.isEmpty() || zkSignatureFour.isEmpty() ){
+			        alert('Please sign all the fields');
+			       // return false;
+			};
+
+			if ( (nda_1_date == '') || (nda2_date_a == '') || (nda2_date_b == '') || (nda2_print_name_a == '')
+			 || (nda2_print_name_b = '') ||
+			 (nda3_name == '') || (nda3_org_name == '') || (nda3_employee_name == '') || (nda3_employer_title == '')
+			 || (nda3_date_a == '') || (nda3_date_b == '') ){
+			    alert('All fields are mandatory!!');
+			    //return false;
+			}
+
+			document.getElementById('signature').value = signature;
+			document.getElementById('signature1').value = signature1;
+			document.getElementById('signature2').value = signature2;
+			document.getElementById('signature3').value = signature3;
+			document.getElementById('signature4').value = signature4;
+
+
+			return true;
+
+
+        }
+        function dosubmit(e){
+             if( confirm('By Submitting this form you agree that the information shared by you is correct and up-to-date ? ') ){
+                 save();
+             }
+        }
+        document.getElementById('frm').addEventListener('submit', dosubmit);
+    </script>
+</body>
+</html>
