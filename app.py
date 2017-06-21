@@ -1,4 +1,5 @@
 import os
+import sys
 import datetime
 import base64
 
@@ -8,9 +9,11 @@ from flask import redirect
 from flask import request
 from flask_mail import Message
 
+
 from extensions import db
 from extensions import mail
 from models import NDAForm
+from ftp import upload_file
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -23,6 +26,13 @@ app.config['MAIL_USERNAME'] = r'kmt.aigbusiness@gmail.com'
 app.config['MAIL_PASSWORD'] = r'test@123456'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
+
+app.config['SERVER'] = 'aigbusiness.in'
+app.config['PORT'] = 21
+app.config['BINARY_STORE'] = True
+app.config['USER'] = 'policies@aigbusiness.in'
+app.config['PASS'] = 'policy123'
+
 
 db.init_app(app)
 mail.init_app(app)
@@ -105,12 +115,18 @@ def save_data():
     db.session.add(nda_form)
     db.session.commit()
 
+    signature=upload_file('signature', emp_name)
+    signature1 = upload_file('signature1', emp_name)
+    signature2 = upload_file('signature2', emp_name)
+    signature3 = upload_file('signature3', emp_name)
+    signature4 = upload_file('signature4', emp_name)
+
     send_document(
-        signature='http://{}/static/uploads/{}_signature.png'.format(request.host, emp_name),
-        signature1='http://{}/static/uploads/{}_signature1.png'.format(request.host, emp_name),
-        signature2='http://{}/static/uploads/{}_signature2.png'.format(request.host, emp_name),
-        signature3='http://{}/static/uploads/{}_signature3.png'.format(request.host, emp_name),
-        signature4='http://{}/static/uploads/{}_signature4.png'.format(request.host, emp_name),
+        signature= signature,
+        signature1=signature1,
+        signature2=signature2,
+        signature3=signature3,
+        signature4=signature4,
         nda_1_date=request.form.get('nda_1_date'),
         nda2_date_a=request.form.get('nda2_date_a'),
         nda2_date_b=request.form.get('nda2_date_b'),
@@ -129,6 +145,8 @@ def save_data():
 @app.route("/thankyou")
 def thankyou():
     return render_template('thankyou.html')
+
+
 
 
 
