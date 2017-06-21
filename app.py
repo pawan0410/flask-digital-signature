@@ -126,3 +126,9 @@ def save_data():
 
     return redirect('/thankyou')
 
+@app.route("/thankyou")
+def thankyou():
+    return render_template('thankyou.html')
+
+
+
