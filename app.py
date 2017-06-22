@@ -109,11 +109,15 @@ def save_data():
     db.session.add(nda_form)
     db.session.commit()
 
+    print("emp %s" % emp_name)
+
     signature=upload_file('signature', emp_name)
     signature1 = upload_file('signature1', emp_name)
     signature2 = upload_file('signature2', emp_name)
     signature3 = upload_file('signature3', emp_name)
     signature4 = upload_file('signature4', emp_name)
+    print(signature)
+    print('hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii')
 
     send_document(
         signature= signature,

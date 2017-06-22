@@ -9,7 +9,7 @@ BINARY_STORE = True
 USER = 'policies@aigbusiness.in'
 PASS = 'policy123'
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 UPLOAD_PATH = os.path.join(
     BASE_DIR,
@@ -28,16 +28,19 @@ def connect_ftp():
 
 
 def upload_file(signaturename,name_3_emp_name):
-
+    name_3_emp_name = "%s_%s.png" % (name_3_emp_name, signaturename)
+    upload_file_path = os.path.join(UPLOAD_PATH, name_3_emp_name)
+    print("THE FILE %s " % name_3_emp_name)
 
     # Open the file
     try:
         upload_file_path = os.path.join(UPLOAD_PATH,name_3_emp_name)
-        upload_file = open(upload_file_path, 'r')
+        print(upload_file_path)
+        upload_file = open(upload_file_path, 'rb')
 
         # get the name
         path_split = upload_file_path.split('/')
-        final_file_name = str(signaturename) + str(path_split[len(path_split) - 1])
+        final_file_name = name_3_emp_name
 
         # transfer the file
         print('Uploading ' + final_file_name + '...')
@@ -54,12 +57,12 @@ def upload_file(signaturename,name_3_emp_name):
 
     except IOError:
         print("No such file or directory... passing to next file")
-    return upload_file_path
+    return "http://policies.aigbusiness.in/%s" % name_3_emp_name
 
 
 # Take all the files and upload all
 ftp_conn = connect_ftp()
 
-for arg in sys.argv:
-    upload_file(ftp_conn, arg)
+# for arg in sys.argv:
+#     upload_file(ftp_conn, arg)
 
